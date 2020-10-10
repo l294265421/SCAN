@@ -6,13 +6,13 @@
 - pytorch-transformers==1.1.0
 - allennlp==0.9.0
 
-#Supported datasets
+# Supported datasets
 - SemEval-2014-Task-4-REST-DevSplits (Rest14)
 - MAMSACSA (MAMS-ACSA)
 - SemEval-141516-LARGE-REST
 
 # Instructions:
-. Before excuting the following commands, replace glove.840B.300d.txt(http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip), bert-base-uncased.tar.gz(https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz) and vocab.txt(https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt) with the corresponding absolute paths in your computer. 
+Before excuting the following commands, replace glove.840B.300d.txt(http://nlp.stanford.edu/data/wordvecs/glove.840B.300d.zip), bert-base-uncased.tar.gz(https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz) and vocab.txt(https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt) with the corresponding absolute paths in your computer. 
 
 ## SCAN
 ### Train
