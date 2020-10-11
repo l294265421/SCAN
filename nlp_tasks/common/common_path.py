@@ -3,6 +3,7 @@ import os
 project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 original_data_dir = project_dir + '/original_data/'
+original_data_dir_big = project_dir + '/original_data/'
 
 common_data_dir = project_dir + '/data/'
 common_code_dir = project_dir + '/nlp_tasks/'
