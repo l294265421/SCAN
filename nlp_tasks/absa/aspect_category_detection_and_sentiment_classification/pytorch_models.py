@@ -333,7 +333,7 @@ class GATLayer(nn.Module):
         sample_num = len(g)
         node_num_per_sample = h.shape[1]
         edges_of_samples = [[] for _ in range(sample_num)]
-        if 'gat_visualization' not in self.opt or self.opt['gat_visualization']:
+        if 'gat_visualization' in self.opt and self.opt['gat_visualization']:
             for edges in self.for_visualization:
                 edge_num = edges['dst_node_ids'].shape[0]
                 for i in range(edge_num):
@@ -385,11 +385,11 @@ class GAT(nn.Module):
         # h = F.elu(h)
         # h = self.layer2(h, g)
         # 兼容之前保存的模型
-        return h, attention
-        # if 'gat_visualization' not in self.opt or self.opt['gat_visualization']:
-        #     return h, attention
-        # else:
-        #     return h
+        # return h, attention
+        if 'gat_visualization' in self.opt and self.opt['gat_visualization']:
+            return h, attention
+        else:
+            return h
 
 
 class GATForAspectCategory(nn.Module):
@@ -406,11 +406,11 @@ class GATForAspectCategory(nn.Module):
         h, attention = self.layer1(h, g)
         # h = F.elu(h)
         # h = self.layer2(h, g)
-        return h, attention
-        # if 'gat_visualization' not in self.opt or self.opt['gat_visualization']:
-        #     return h, attention
-        # else:
-        #     return h
+        # return h, attention
+        if 'gat_visualization' in self.opt and self.opt['gat_visualization']:
+            return h, attention
+        else:
+            return h
 
 
 class NodeApplyModule(nn.Module):

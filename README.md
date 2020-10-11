@@ -38,3 +38,10 @@ python nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd
 ## Visualization
 After models are trained, we can visualize the attention weights by adding one extra option to the commands mentioned above, --visualize_attention True. For example,
 python nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd_and_sc_bootstrap_pytorch_sentence_constituency.py --embedding_filepath glove.840B.300d.txt --data_type constituency --current_dataset SemEval-2014-Task-4-REST-DevSplits --joint_type joint --attention_warmup_init False --acd_sc_encoder_mode same --acd_encoder_mode mixed --bert False --pair False --lstm_or_fc_after_embedding_layer lstm --aspect_graph gat --sentiment_graph gat --batch_size 32 --train False --evaluate False --visualize_attention True
+
+## Run the models for multiple times
+In order to run the models for multiple times, we can use the shell script, repeat.sh, to run the commands mentioned above by replacing the "python" in the commands  with:
+
+sh repeat.sh 0-0-0,0-0-1,0-0-2,0-0-3,0-0-4
+
+where 0-0-0 is the name of the first run.
